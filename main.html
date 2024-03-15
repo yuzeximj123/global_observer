@@ -1,0 +1,847 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merged Project</title>
+    <style>
+        /* Earth Project CSS */
+body {
+  margin: 8px;
+  background-color: #1d2224;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+canvas {
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - 180px);
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  margin: 5px 0 0;
+}
+
+p:last-child {
+  font-style: italic;
+}
+
+/* Newspaper Project SCSS (needs compilation) */
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2a2a2a;
+    --secondary-color: #743e0d;
+    --white-color: white;
+    --green-color: #439c47;
+    --transition-animation: all .5s;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    margin: 10px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition-animation);
+
+    &:hover,
+    &:visited,
+    &:focus {
+        color: var(--primary-color);
+    }
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+
+
+
+/***************************************************
+    Create A Dark/Light Mode Switch with CSS Variables
+    Source: https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
+***************************************************/
+[data-theme="dark"] {
+    --primary-color: white;
+    --secondary-color: var(--green-color);
+    --white-color: #2a2a2a;
+
+    .button a:hover,
+    .button a:focus,
+    .button a:active {
+        color: white;
+    }
+}
+
+/* Toggle switch styling */
+.dark_mode_container {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    .dark_mode_switch {
+        display: inline-block;
+        height: 34px;
+        position: absolute;
+        top: -125px;
+        right: 0;
+        width: 60px;
+        max-width: 60px;
+        
+        input {
+            display: none;
+        }
+
+        input:checked+.slider {
+            background-color: var(--green-color);
+            
+            &:before {
+                transform: translateX(25px);
+            }
+        }
+    }
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: var(--transition-animation);
+
+    width: 60px;
+    
+    &:before {
+        background-color: var(--white-color);
+        bottom: 5px;
+        content: "";
+        height: 25px;
+        left: 5px;
+        position: absolute;
+        transition: var(--transition-animation);
+        width: 25px;
+    }
+
+    &.round {
+        border-radius: 34px;
+        
+        &:before {
+            border-radius: 50%;
+        }
+    }
+}
+
+
+
+
+
+/**************************************
+    Header of Paper
+**************************************/
+header {
+    text-align: center;
+    position: relative;
+
+    h1.news_paper_title {
+        margin: 0;
+
+        a {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 60px;
+            text-transform: uppercase;
+            display: inline-block;
+            line-height: 60px;
+            margin: 15px 0;
+            cursor: pointer;
+            color: var(--primary-color);
+            transition: var(--transition-animation);
+        
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
+    }
+    
+    .news_paper_location {
+        font-weight: 600;
+        border-bottom: 1px solid var(--primary-color);
+        border-top: 1px solid var(--primary-color);
+        padding: 10px 0 10px 0;
+        margin: 20px 0;
+    }
+}
+
+@media only all and (max-width: 600px) {
+    header {
+        h1.news_paper_title a {
+            font-size: 40px;
+            line-height: 40px;
+            margin: 5px 0;
+        }
+    }
+}
+
+
+
+
+/**************************************
+    Content Area of Newspaper
+**************************************/
+.headline {
+    text-align: center;
+    line-height: normal;
+    font-family: 'Playfair Display', serif;
+    display: block;
+    margin: 0 auto;
+    
+    h2.title {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 22px;
+        
+        &:hover {
+            color: var(--secondary-color);
+        }
+    }
+    
+    h3.writer {
+        font-weight: 700;
+        font-size: 12px;
+
+        &:hover {
+            color: var(--secondary-color);
+        }
+        
+        &:before {
+            border-top: 1px solid var(--primary-color);
+            content: '';
+            width: 100px;
+            height: 7px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        &:after {
+            border-bottom: 1px solid var(--primary-color);
+            content: '';
+            width: 100px;
+            height: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+.button a {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 16px;
+    padding: 10px 15px;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: var(--green-color);
+        border: 1px solid var(--green-color);
+        color: var(--white-color);
+    }
+}
+
+
+
+
+
+/**************************************
+    Images & iframes
+**************************************/
+figure {
+    cursor: pointer;
+    margin: 0 0 20px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: var(--transition-animation);
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        font-style: italic;
+        font-size: 12px;
+        text-align: left;
+        transition: var(--transition-animation);
+
+        &:hover {
+            padding-left: 10px;
+        }
+    }
+    
+    &:hover {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+    }
+}
+
+
+
+
+
+/***************************************************
+    Responsive Framework
+    https://codepen.io/HikwaMehluli/full/qeNOVv
+***************************************************/
+.the-grid-section {
+	max-width: 1500px;
+	margin: 0 auto;
+    width: 100%;
+    
+    .the-grid {
+        margin-bottom: 40px;
+        transition: all 0.5s;
+    
+        .the-grid-content {
+          padding: 10px;
+            p {
+              display: -webkit-box;   
+                -webkit-line-clamp: 5;   
+                -webkit-box-orient: vertical;     
+                overflow: hidden; 
+            }
+        }
+    }
+}
+
+/* the flexbox magic */
+@media screen and (min-width: 768px) {
+    .the-grid-section {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    .the-grid {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex: 0 1 calc(50% - .5em);
+            -ms-flex: 0 1 calc(50% - .5em);
+                flex: 0 1 calc(50% - .5em);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .the-grid {
+        -webkit-flex: 0 1 calc(33% - 1em);
+            -ms-flex: 0 1 calc(33% - 1em);
+                flex: 0 1 calc(33% - 1em);
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .the-grid {
+        -webkit-flex: 0 1 calc(25% - 1em);
+            -ms-flex: 0 1 calc(25% - 1em);
+                flex: 0 1 calc(25% - 1em);
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Earth Project -->
+<canvas width="700" height="700"></canvas>
+<div id="routeInfo"></div>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://unpkg.com/topojson-client@3.0.0/dist/topojson-client.min.js"></script>
+<script src="https://unpkg.com/topojson-simplify@3.0.2/dist/topojson-simplify.min.js"></script>
+<script src="https://unpkg.com/geodesy@1.1.3/latlon-spherical.js"></script>
+
+<!-- Newspaper Project -->
+<header>
+	<h1 class="news_paper_title">
+		<a href="#">Global Observer</a>
+  <h1>connecting views of globe</h1>
+	</h1>
+
+	<div class="dark_mode_container">
+		<label class="dark_mode_switch" for="checkbox">
+			<input type="checkbox" id="checkbox" />
+			<div class="slider round"></div>
+		</label>
+	</div>
+
+	<div class="news_paper_location">Southern Africa's Top News - <span id="time"></span></div>
+</header>
+
+<section class="the-grid-section">
+
+	<article class="the-grid">
+		<div class="the-grid-content">
+			<div class="headline">
+				<a href="https://en.wikipedia.org/wiki/Northern_Ndebele_people" target="_blank">
+					<h2 class="title">Northern Ndebele people</h2>
+					<h3 class="writer">From Wikipedia, the free encyclopedia</h3>
+					<figure>
+						<img src="https://source.unsplash.com/kGgsoEU4EIw/1280x720" alt="">
+						<figcaption><a href="https://unsplash.com/@kreatedmedia" target="_blank">Image Source: Kreated Media</a></figcaption>
+					</figure>
+				</a>
+			</div>
+			<p>The Northern Ndebele people (Northern Ndebele: amaNdebele) are a Bantu-speaking nation and ethnic group in Southern Africa, who share a common Ndebele culture and Ndebele language (isiNdebele). The Northern Ndebele were historically referred to as the Matabele which derives from the Sesotho expression thebele...</p>
+			<div class="button">
+				<a href="https://en.wikipedia.org/wiki/Northern_Ndebele_people" target="_blank">Read More</a>
+			</div>
+		</div>
+	</article>
+
+	<article class="the-grid">
+		<div class="the-grid-content">
+			<div class="headline">
+				<a href="https://en.wikipedia.org/wiki/Shaka" target="_blank">
+					<h2 class="title">Shaka kaSenzangakhona</h2>
+					<h3 class="writer">From Wikipedia, the free encyclopedia</h3>
+					<figure>
+						<img src="https://source.unsplash.com/2p9waQFqeEY/1280x720" alt="">
+						<figcaption><a href="https://unsplash.com/@phillipgold" target="_blank">Image Source: Phillip Goldsberry</a></figcaption>
+					</figure>
+				</a>
+			</div>
+			<p>He was born in the lunar month of uNtulikazi (July) in the year of 1787 near present-day Melmoth, KwaZulu-Natal Province. Due to persecution as a result of his illegitimacy, Shaka spent his childhood in his mother's settlements where he was initiated into an ibutho lempi (fighting unit). In his early days, Shaka served as a warrior...</p>
+			<div class="button">
+				<a href="https://en.wikipedia.org/wiki/Shaka" target="_blank">Read More</a>
+			</div>
+		</div>
+	</article>
+
+	<article class="the-grid">
+		<div class="the-grid-content">
+			<div class="headline">
+				<a href="https://en.wikipedia.org/wiki/Mfecane" target="_blank">
+					<h2 class="title">Mfecane</h2>
+					<h3 class="writer">From Wikipedia, the free encyclopedia</h3>
+					<figure>
+						<img src="https://source.unsplash.com/phCxE6VblZk/1280x720" alt="">
+						<figcaption><a href="https://unsplash.com/@josephanson" target="_blank">Image Source: Joseph Anson</a></figcaption>
+					</figure>
+				</a>
+			</div>
+			<p>Mfecane (isiZulu, Zulu pronunciation: [m̩fɛˈkǀaːne]), also known by the Sesotho name Difaqane or Lifaqane (all meaning "crushing, scattering, forced dispersal, forced migration"), was a period of widespread chaos and warfare among indigenous ethnic communities in southern Africa during the period between 1815 and about 1840.</p>
+			<div class="button">
+				<a href="https://en.wikipedia.org/wiki/Mfecane" target="_blank">Read More</a>
+			</div>
+		</div>
+	</article>
+
+	<article class="the-grid">
+		<div class="the-grid-content">
+			<div class="headline">
+				<a href="https://en.wikipedia.org/wiki/Anglo-Zulu_War" target="_blank">
+					<h2 class="title">Anglo-Zulu War</h2>
+					<h3 class="writer">From Wikipedia, the free encyclopedia</h3>
+					<figure>
+						<img src="https://source.unsplash.com/8US1_1QMHi0/1280x720" alt="">
+						<figcaption><a href="https://unsplash.com/@britishlibrary" target="_blank">Image Source: British Library</a></figcaption>
+					</figure>
+				</a>
+			</div>
+			<p>The Anglo-Zulu War was fought in 1879 between the British Empire and the Zulu Kingdom. Following Lord Carnarvon's successful introduction of federation in Canada, it was thought that similar political effort, coupled with military campaigns, might succeed with the African kingdoms, tribal areas and Boer republics in South Africa.</p>
+			<div class="button">
+				<a href="https://en.wikipedia.org/wiki/Anglo-Zulu_War" target="_blank">Read More</a>
+			</div>
+		</div>
+	</article>
+
+</section>
+    <script>
+        // Earth Project JS
+var canvas = d3.select("canvas");
+var ctx = canvas.node().getContext("2d");
+var canvasWidth = +canvas.attr("width");
+var canvasHeight = +canvas.attr("height");
+
+var projection = d3
+  .geoOrthographic()
+  .rotate([-161.03795250984288, -78.66662854125848, 180])
+  .fitSize([canvasWidth, canvasHeight], { type: "Sphere" });
+
+var geoPathGenerator = d3
+  .geoPath()
+  .projection(projection)
+  .context(ctx);
+
+ctx.lineJoin = "round";
+ctx.lineCap = "round";
+ctx.fillStyle = "white";
+
+var sphereStyle = {
+  lineWidth: 1,
+  strokeStyle: "grey"
+};
+
+var countriesStyle = {
+  lineWidth: 0.5,
+  strokeStyle: "#1d2224"
+};
+
+var allFlightLinesStyle = {
+  lineWidth: 2,
+  strokeStyle: "rgba(0, 191, 255, 0.75)"
+};
+
+var activeFlightLineStyle = {
+  lineWidth: 5,
+  strokeStyle: "#0D0970"
+};
+
+// draw sphere while waiting for world topojson to load and parse
+drawEarth(true, false);
+
+d3
+  .json("https://unpkg.com/world-atlas@1.1.4/world/110m.json")
+  .then(function(loadedTopoJson) {
+    var topology = topojson.presimplify(loadedTopoJson);
+    topology = topojson.simplify(topology, 0.25);
+    var worldGeoJson = topojson.feature(topology, topology.objects.countries);
+
+    // draw countries
+    drawEarth(false, worldGeoJson);
+
+    Promise.all([
+      d3.csv(
+        "https://gist.githubusercontent.com/jwasilgeo/df731e6bec2ce12ceb2b0bc2274c5ee9/raw/5b22f98b114d1624893a0f370bb63ad81fc13b5c/longest_flights_10242018.csv"
+      ),
+      d3.json(
+        "https://gist.githubusercontent.com/jwasilgeo/df731e6bec2ce12ceb2b0bc2274c5ee9/raw/5b22f98b114d1624893a0f370bb63ad81fc13b5c/airports.topojson.json"
+      )
+    ]).then(function(loadedDataResults) {
+      var csvData = loadedDataResults[0];
+
+      var airportsGeoJson = topojson.feature(
+        loadedDataResults[1],
+        loadedDataResults[1].objects.collection
+      );
+
+      var lineStringGeometryInfos = csvData.map(function(csvRow) {
+        // look up from and to coordinates by matching csv row with airports geojson file
+        var fromCoordinates = airportsGeoJson.features.filter(function(f) {
+          return f.properties.name === csvRow.From;
+        })[0].geometry.coordinates;
+
+        var toCoordinates = airportsGeoJson.features.filter(function(f) {
+          return f.properties.name === csvRow.To;
+        })[0].geometry.coordinates;
+
+        var lineStringGeometry = {
+          type: "LineString",
+          coordinates: [fromCoordinates, toCoordinates]
+        };
+
+        // use geodesy.js to help with bearing calculations
+        var fromLatLon = new LatLon(fromCoordinates[1], fromCoordinates[0]);
+        var toLatLon = new LatLon(toCoordinates[1], toCoordinates[0]);
+        var midLatLon = fromLatLon.midpointTo(toLatLon);
+
+        return {
+          lineStringGeometry: lineStringGeometry,
+          centroid: d3.geoCentroid(lineStringGeometry),
+          bearing: midLatLon.bearingTo(toLatLon),
+          fromCoordinates: fromCoordinates,
+          toCoordinates: toCoordinates,
+          fromAirportName: csvRow.From,
+          toAirportName: csvRow.To,
+          rank: csvRow.Rank,
+          distance: csvRow.Distance
+        };
+      });
+
+      drawInitialFlightLines(worldGeoJson, lineStringGeometryInfos);
+    });
+  });
+
+function drawInitialFlightLines(worldGeoJson, lineStringGeometryInfos) {
+  d3
+    .select({})
+    .transition()
+    .duration(5000)
+    .tween(null, function() {
+      return function(t) {
+        ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+
+        drawEarth(true, worldGeoJson);
+
+        // progressively draw partial flight lines during each step of the transition
+        ctx.lineWidth = allFlightLinesStyle.lineWidth;
+        ctx.strokeStyle = allFlightLinesStyle.strokeStyle;
+        lineStringGeometryInfos.forEach(function(geometryInfo) {
+          var partialLine = JSON.parse(
+            JSON.stringify(geometryInfo.lineStringGeometry)
+          );
+          var interpolatedEndPoint = d3.geoInterpolate(
+            partialLine.coordinates[0],
+            partialLine.coordinates[1]
+          )(t);
+          partialLine.coordinates[1] = interpolatedEndPoint;
+          ctx.beginPath();
+          geoPathGenerator(partialLine);
+          ctx.stroke();
+          ctx.closePath();
+        });
+      };
+    })
+    .on("end", function() {
+      rotateMapToNextFeature(worldGeoJson, lineStringGeometryInfos);
+    });
+}
+
+function rotateMapToNextFeature(worldGeoJson, lineStringGeometryInfos, delay) {
+  var geometryInfo = lineStringGeometryInfos[0];
+  var nextGeoJson = geometryInfo.lineStringGeometry;
+  var nextCentroid = geometryInfo.centroid;
+  var nextBearing = geometryInfo.bearing - 90;
+
+  var nextRotationDestination = [
+    -nextCentroid[0],
+    -nextCentroid[1],
+    nextBearing
+  ];
+
+  if (projection.rotate()[0] - nextRotationDestination[0] > 179) {
+    nextRotationDestination[0] += 360;
+  } else if (projection.rotate()[0] - nextRotationDestination[0] < -179) {
+    nextRotationDestination[0] -= 360;
+  }
+
+  d3
+    .select({})
+    .transition()
+    .duration(2000)
+    .delay(delay ? delay : 0)
+    .tween(null, function() {
+      var interpolator = d3.interpolate(
+        geoPathGenerator.projection().rotate(),
+        nextRotationDestination
+      );
+
+      //d3.select("#routeInfo").text(null);
+
+      return function(t) {
+        geoPathGenerator.projection().rotate(interpolator(t));
+
+        ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+
+        drawEarth(true, worldGeoJson);
+
+        // draw all flight lines
+        ctx.lineWidth = allFlightLinesStyle.lineWidth;
+        ctx.strokeStyle = allFlightLinesStyle.strokeStyle;
+        lineStringGeometryInfos.forEach(function(geometryInfo) {
+          ctx.beginPath();
+          geoPathGenerator(geometryInfo.lineStringGeometry);
+          ctx.stroke();
+          ctx.closePath();
+        });
+      };
+    })
+    .on("end", function() {
+      animateActiveFlightLine(
+        worldGeoJson,
+        lineStringGeometryInfos,
+        function() {
+          lineStringGeometryInfos.push(lineStringGeometryInfos.shift());
+          rotateMapToNextFeature(worldGeoJson, lineStringGeometryInfos, 1750);
+        }
+      );
+    });
+}
+
+function animateActiveFlightLine(
+  worldGeoJson,
+  lineStringGeometryInfos,
+  callback
+) {
+  var geometryInfo = lineStringGeometryInfos[0];
+  var nextGeoJson = geometryInfo.lineStringGeometry;
+
+  //d3
+    //.select("#routeInfo")
+    //.html(
+      //"<p>" +
+      //geometryInfo.rank +
+     // ". " +
+     // geometryInfo.fromAirportName +
+      //" to " +
+      //geometryInfo.toAirportName +
+      //"</p><p>" +
+      //geometryInfo.distance +
+      //"</p>"
+    //);
+
+  d3
+    .select({})
+    .transition()
+    .duration(6000)
+    .tween(null, function() {
+      return function(t) {
+        ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+
+        drawEarth(true, worldGeoJson);
+
+        // draw all flight lines
+        ctx.lineWidth = allFlightLinesStyle.lineWidth;
+        ctx.strokeStyle = allFlightLinesStyle.strokeStyle;
+        lineStringGeometryInfos.forEach(function(geometryInfo) {
+          ctx.beginPath();
+          geoPathGenerator(geometryInfo.lineStringGeometry);
+          ctx.stroke();
+          ctx.closePath();
+        });
+
+        // progressively draw active flight line
+        ctx.lineWidth = activeFlightLineStyle.lineWidth;
+        ctx.strokeStyle = activeFlightLineStyle.strokeStyle;
+        var partialLine = JSON.parse(JSON.stringify(nextGeoJson));
+        var interpolatedEndPoint = d3.geoInterpolate(
+          partialLine.coordinates[0],
+          partialLine.coordinates[1]
+        )(t);
+        partialLine.coordinates[1] = interpolatedEndPoint;
+        ctx.beginPath();
+        geoPathGenerator(partialLine);
+        ctx.stroke();
+        ctx.closePath();
+      };
+    })
+    .on("end", callback);
+}
+
+function drawEarth(drawSphere, worldGeoJson) {
+  if (drawSphere) {
+    // draw sphere
+    ctx.lineWidth = sphereStyle.lineWidth;
+    ctx.strokeStyle = sphereStyle.strokeStyle;
+    ctx.beginPath();
+    geoPathGenerator({ type: "Sphere" });
+    ctx.stroke();
+    ctx.closePath();
+  }
+
+  if (worldGeoJson) {
+    // draw countries
+    ctx.lineWidth = countriesStyle.lineWidth;
+    ctx.strokeStyle = countriesStyle.strokeStyle;
+    ctx.beginPath();
+    geoPathGenerator(worldGeoJson);
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+  }
+}
+
+// for some flat-earth fun you can try: toggleProjection('geoMercator');
+function toggleProjection(projectionName) {
+  projection = d3[projectionName]().fitSize([canvasWidth, canvasHeight], {
+    type: "Sphere"
+  });
+
+  geoPathGenerator = d3
+    .geoPath()
+    .projection(projection)
+    .context(ctx);
+}
+
+// Newspaper Project JS
+// Get The Date
+var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+function checkTime() {
+	var date = new Date();
+	var sufix = '';
+	var hours = ('0' + date.getHours()).slice(-2);
+	var minutes = ('0' + date.getMinutes()).slice(-2);
+	var day = date.getDate();
+	var month = monthNames[date.getMonth()];
+	var weekday = dayNames[date.getDay()];
+	var year = date.getFullYear();
+	if (day > 3 && day < 21) sufix = 'th';
+	switch (day % 10) {
+		case 1:
+			sufix = "st";
+		case 2:
+			sufix = "nd";
+		case 3:
+			sufix = "rd";
+		default:
+			sufix = "th";
+	}
+	document.getElementById('time').innerHTML = weekday + ' ' + day + sufix + ', ' + month + ' ' + year;
+}
+setInterval(checkTime(), 1000);
+
+
+
+
+
+// Dark Mode Switcher
+// Source: https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
+const toggleSwitch = document.querySelector('.dark_mode_switch input[type="checkbox"]');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+  
+    if (currentTheme === 'dark') {
+    	toggleSwitch.checked = true;
+    }
+}
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    }
+    else {
+		document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
+</body>
+</html>
