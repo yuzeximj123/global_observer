@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Stylish News Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&amp;family=Playfair+Display:wght@900&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --background-color-light: #f4f4f4;
+            --background-color-dark: #1d2224;
+            --text-color-light: #333;
+            --text-color-dark: #fff;
+            --font-body: 'Crimson Text', serif;
+            --font-header: 'Playfair Display', serif;
+        }
+
+        [data-theme="dark"] {
+            --background-color: var(--background-color-dark);
+            --text-color: var(--text-color-dark);
+        }
+
+        [data-theme="light"] {
+            --background-color: var(--background-color-light);
+            --text-color: var(--text-color-light);
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .news-title {
+            font-family: var(--font-header);
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .news-graph {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .news-summary {
+            font-size: 16px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: left;
+            font-style: italic;
+        }
+
+        .news-article {
+            font-size: 18px;
+            margin: 0 auto;
+            max-width: 600px;
+            text-align: left;
+            text-transform: capitalize;
+        }
+
+        .dark-mode-switch {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+<body data-theme="light">
+<div class="dark-mode-switch">
+<label class="switch">
+<input type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="container">
+<h2 class="news-title">Updated News Title</h2>
+
+    <div class="audio-bar">
+        <audio controls>
+            <source src="path-to-audio-file.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+<img alt="News Graph" class="news-graph" src="new-image-path.jpg"/>
+<p class="news-summary">Updated summary of the news.</p>
+<div class="news-article"><p>First paragraph of new content.</p><p>Second paragraph of new content.</p></div>
+</div>
+<script>
+        const toggleSwitch = document.querySelector('.dark-mode-switch input[type="checkbox"]');
+        toggleSwitch.addEventListener('change', switchTheme, false);
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.body.setAttribute('data-theme', 'dark');
+            } else {
+                document.body.setAttribute('data-theme', 'light');
+            }
+        }
+    </script>
+</body>
+</html>

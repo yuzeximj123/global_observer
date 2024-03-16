@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Stylish News Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&amp;family=Playfair+Display:wght@900&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --background-color-light: #f4f4f4;
+            --background-color-dark: #1d2224;
+            --text-color-light: #333;
+            --text-color-dark: #fff;
+            --font-body: 'Crimson Text', serif;
+            --font-header: 'Playfair Display', serif;
+        }
+
+        [data-theme="dark"] {
+            --background-color: var(--background-color-dark);
+            --text-color: var(--text-color-dark);
+        }
+
+        [data-theme="light"] {
+            --background-color: var(--background-color-light);
+            --text-color: var(--text-color-light);
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .news-title {
+            font-family: var(--font-header);
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .news-graph {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .news-summary {
+            font-size: 16px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: left;
+            font-style: italic;
+        }
+
+        .news-article {
+            font-size: 18px;
+            margin: 0 auto;
+            max-width: 600px;
+            text-align: left;
+            text-transform: capitalize;
+        }
+
+        .dark-mode-switch {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+<body data-theme="light">
+<div class="dark-mode-switch">
+<label class="switch">
+<input type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="container">
+<h2 class="news-title">2023 U.S. Economic Retrospective: Resilience Amid Challenges</h2>
+<div class="audio-bar">
+<audio controls="">
+<source src="../audio/article 4.mp3" type="audio/mpeg"/>
+            Your browser does not support the audio element.
+        </audio>
+</div>
+<img alt="News Graph" class="news-graph" src="../main pictures/article 4.webp"/>
+<p class="news-summary">In 2023, the United States experienced a robust economic period, characterized by significant resilience. The year marked a transition into structural inflation, posing unique challenges to both businesses and consumers. Concurrently, interest rates witnessed a substantial rise, reflecting efforts to stabilize the economy and curb inflationary pressures. A noteworthy development was the reduction in the U.S. trade deficit, largely attributed to the strengthened North American Free Trade Zone, signaling a shift in international trade dynamics and domestic economic strategies.</p>
+<div class="news-article"><p>As 2023 closed, the United States economy presented a landscape of robust growth and dynamic change, shaped by a complex interplay of domestic policies and global shifts</p><p>The year was marked by significant expansions and contractions, a testament to the resilience and adaptability of the U.S. economic framework</p><p>Growth Amidst Fluctuations: The U.S. witnessed a strong economic upswing in 2023, underscored by vigorous Gross Domestic Product (GDP) growth and an uptick in employment rates. The Bureau of Economic Analysis provided detailed data reflecting these fluctuations, showcasing the economy's capacity to navigate through varied conditions</p><p>This performance was mirrored in personal consumption expenditures, indicating a buoyant consumer sector driving economic activity</p><p>Investment and Housing: The Twin Pillars of Growth: Investment trends revealed a keen focus on gross private domestic investment and fixed investment. These investments cut across various sectors, highlighting the evolving priorities in the U.S. economy. The housing market, a critical component of economic health, experienced its share of ups and downs. Residential investments fluctuated, reflecting shifts in the real estate market and broader economic conditions</p><p>The Changing Face of Trade: 2023 was also a year of significant change in global trade dynamics. The U.S. saw a notable transformation in its trade deficit, with major shifts in its export partners. This change was emblematic of the evolving international trade landscape, where traditional alliances were reconsidered and new partnerships forged</p><p>Inflation: A Shifting Paradigm: Initially driven by supply-side issues like supply chain disruptions and energy costs, inflation in 2023 transitioned to more structural elements, notably household consumption and housing. This shift was a clear indication of the changing nature of economic challenges faced by the U.S.</p><p>The Fed's Balancing Act: The Federal Reserve's continuous interest rate hikes marked a significant shift in monetary policy, addressing inflationary pressures while balancing the need for economic growth. This move signified a new phase in the U.S.'s economic strategy, harking back to approaches not seen since the 1980s</p><p>Stock Market: The AI Bubble and Beyond: The stock market in 2023 was characterized by what many analysts dubbed the 'AI bubble.' This period saw substantial investments in AI technology, with significant funding flowing into the sector. However, this trend was not without its challenges. Small-cap stocks underperformed, primarily due to the pressure of high-interest rates, affecting smaller businesses more than their larger counterparts</p><p>Looking Ahead: Navigating New Frontiers: As the U.S. economy strides into 2024, it faces a landscape reshaped by its experiences in the past year. From tackling inflation to adapting to new trade dynamics and harnessing technology for growth, the path ahead is lined with opportunities and challenges. The economic decisions made in the coming year will be crucial in steering the course of the U.S. economy, as it seeks to maintain its growth trajectory while adapting to an ever-changing global economic environment</p><p>In conclusion, 2023 was a year that tested the resilience and adaptability of the U.S. economy. It emerged not unscathed but stronger, ready to face the new challenges and opportunities that lie ahead. As we move forward, the lessons learned in this dynamic year will undoubtedly shape the economic policies and strategies for years to come.</p></div>
+</div>
+<script>
+        const toggleSwitch = document.querySelector('.dark-mode-switch input[type="checkbox"]');
+        toggleSwitch.addEventListener('change', switchTheme, false);
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.body.setAttribute('data-theme', 'dark');
+            } else {
+                document.body.setAttribute('data-theme', 'light');
+            }
+        }
+    </script>
+</body>
+</html>
