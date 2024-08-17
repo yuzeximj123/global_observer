@@ -102,7 +102,7 @@ input:checked + .slider:before {
 
 .article_title {
     font-weight: 700;
-    font-size: 32px; /* 增大标题字体 */
+    font-size: 36px; /* 增大标题字体 */
     margin-bottom: 20px; /* 标题下方留白 */
     text-align: center; /* 标题居中 */
 }
@@ -163,9 +163,26 @@ input:checked + .slider:before {
 }
 
 .article_grid_content p {
-    margin: 20px 0;
+    margin: 30px 0;
     text-align: justify;
     line-height: 1.6;
+}
+
+/* Content Styles */
+.article_content {
+    margin: 20px 0;
+    line-height: 1.8;
+    text-align: justify;
+    font-size: 28px; /* 增大 content 字体 */
+    font-weight: bold; /* 加粗 content */
+}
+
+/* 新增 article_text 样式 */
+.article_text p {
+    margin: 20px 0;
+    line-height: 2; /* 增加行高以提高可读性 */
+    text-align: justify;
+    font-size: 24px; /* 调整文字大小 */
 }
 
 @media screen and (min-width: 1000px) {
@@ -187,18 +204,55 @@ input:checked + .slider:before {
     right: 20px;
     background-color: #808080; /* 灰色背景 */
     color: white;
-    padding: 15px;
-    border-radius: 50%;
+    width: 50px;  /* 宽度调整为 50px，形成正方形 */
+    height: 50px; /* 高度调整为 50px，形成正方形 */
+    border-radius: 50%; /* 使按钮成为完美的圆形 */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 居中对齐图标 */
 }
+
 
 .article_back_to_home:hover {
     background-color: #666666; /* 悬停时变深 */
 }
 
 .article_back_to_home i {
-    font-size: 24px;
-    color: white; /* 白色的菜单图标 */
+    font-size: 24px; /* 调整图标大小 */
+    color: white; /* 图标颜色 */
+}
+
+/*tool to use */
+/* Divider Styles */
+.article_divider {
+    display: flex;
+    align-items: center;
+    margin: 40px 0; /* 调整分隔符的上下间距 */
+    text-align: center;
+}
+
+.article_divider::before,
+.article_divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid #6f6f6f; /* 横线的样式 */
+}
+
+.article_divider::before {
+    margin-right: 10px;
+}
+
+.article_divider::after {
+    margin-left: 10px;
+}
+
+.article_divider span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #6f6f6f; /* 圆点的颜色 */
+    border-radius: 50%;
 }

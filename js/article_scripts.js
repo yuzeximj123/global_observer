@@ -81,7 +81,11 @@ function articleLoadContent(file, language) {
                                     <img class="article_img" src="${content.image}" alt="${content.title}">
                                     <figcaption class="article_figcaption">${content.imageSourceText} - <a href="${content.imageSource}" target="_blank">${content.imageSource}</a></figcaption>
                                 </figure>
-                                <p>${content.content}</p>
+                                <p class="article_content">${content.content}</p>
+                                <div class="article_divider"><span></span></div>
+                                <div class="article_text">
+                                    <p>${content.article_text.replace(/\n/g, '</p><p>')}</p>
+                                </div>
                             </div>
                         </article>
                     `;

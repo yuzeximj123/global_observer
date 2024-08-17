@@ -11,7 +11,7 @@ body {
 :root {
     --primary-color: #2a2a2a;
     --secondary-color: #743e0d;
-    --white-color: white;
+    --white-color: rgb(255, 255, 255);
     --green-color: #439c47;
     --transition-animation: all 0.5s;
     --background-color: var(--white-color);
@@ -23,7 +23,7 @@ body {
     --secondary-color: #439c47;
     --white-color: #2a2a2a;
     --background-color: #2a2a2a;
-    --text-color: white;
+    --text-color: rgb(230, 226, 212);
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -299,4 +299,6 @@ figcaption {
 @media screen and (min-width: 1000px) {
     .the-grid {
         flex: 1 1 calc(33.333% - 1em);
-        max-wid
+        max-width: calc(33.333% - 1em); /* 修正的部分 */
+    }
+}
