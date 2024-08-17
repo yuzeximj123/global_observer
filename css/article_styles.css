@@ -1,27 +1,29 @@
-/* Dark Mode Toggle Styles */
+/* 基本样式调整，确保没有水平溢出 */
 body {
     overflow-x: hidden; /* 禁用水平滚动 */
     max-width: 100%; /* 确保页面宽度不会超过视口 */
     margin: 0; /* 移除任何默认的外边距 */
+    padding: 0;
 }
 
 html {
-    overflow-x: hidden; /* 确保根元素也禁用水平滚动 */
+    overflow-x: hidden; /* 禁用根元素的水平滚动 */
     max-width: 100%; /* 确保根元素的宽度不会超过视口 */
     margin: 0;
     padding: 0;
 }
 
-/* 确保容器元素在小屏幕上不超过视口宽度 */
+/* 容器元素的样式 */
 .article_grid_section,
 .article_grid,
 .article_content,
 .article_text,
 .article_figure {
     max-width: 100%; /* 确保元素宽度不会超过视口 */
-    box-sizing: border-box; /* 使内边距和边框包含在宽度内 */
+    box-sizing: border-box; /* 包括内边距和边框 */
 }
 
+/* 图片样式 */
 .article_img {
     max-width: 100%;
     height: auto;
@@ -29,6 +31,7 @@ html {
     margin: 0 auto;
 }
 
+/* Dark Mode Toggle Styles */
 .dark_mode_container {
     display: flex;
     position: relative;
@@ -112,15 +115,6 @@ input:checked + .slider:before {
     margin: 20px 0;
 }
 
-@media only all and (max-width: 600px) {
-    .article_news_paper_title a {
-        font-size: 40px;
-        line-height: 40px;
-        margin: 5px 0;
-    }
-}
-
-
 /* Article Styles */
 .article_headline {
     text-align: center;
@@ -132,15 +126,15 @@ input:checked + .slider:before {
 
 .article_title {
     font-weight: 700;
-    font-size: 36px; /* 增大标题字体 */
-    margin-bottom: 20px; /* 标题下方留白 */
-    text-align: center; /* 标题居中 */
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .article_writer {
     font-weight: 700;
     font-size: 14px;
-    margin-bottom: 20px; /* 作者信息下方留白 */
+    margin-bottom: 20px;
 }
 
 .article_button a {
@@ -160,7 +154,7 @@ input:checked + .slider:before {
 }
 
 .article_img {
-    max-width: 70%; /* 将图片的最大宽度限制为父容器的 70% */
+    max-width: 70%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -173,46 +167,52 @@ input:checked + .slider:before {
     transition: var(--article_transition-animation);
 }
 
-/* Grid Layout Styles */
-.article_grid_section {
-    max-width: 800px; /* 限制内容最大宽度，以保持页面居中且美观 */
-    margin: 0 auto; /* 使内容居中显示 */
-    width: 100%;
-    padding: 20px; /* 增加内边距，避免内容贴近边缘 */
-}
-
-.article_grid {
-    margin-bottom: 40px;
-    transition: all 0.5s;
-    text-align: center; /* 确保内容在父容器内居中 */
-}
-
-.article_grid_content {
-    display: block;
-    margin: 0 auto;
-}
-
-.article_grid_content p {
-    margin: 30px 0;
-    text-align: justify;
-    line-height: 1.6;
-}
-
 /* Content Styles */
 .article_content {
     margin: 20px 0;
     line-height: 1.8;
     text-align: justify;
-    font-size: 28px; /* 增大 content 字体 */
-    font-weight: bold; /* 加粗 content */
+    font-size: 28px;
+    font-weight: bold;
 }
 
-/* 新增 article_text 样式 */
+/* Text Styles */
 .article_text p {
     margin: 20px 0;
-    line-height: 2; /* 增加行高以提高可读性 */
+    line-height: 2;
     text-align: justify;
-    font-size: 24px; /* 调整文字大小 */
+    font-size: 24px;
+}
+
+/* Divider Styles */
+.article_divider {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.article_divider::before,
+.article_divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid #6f6f6f;
+}
+
+.article_divider::before {
+    margin-right: 10px;
+}
+
+.article_divider::after {
+    margin-left: 10px;
+}
+
+.article_divider span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #6f6f6f;
+    border-radius: 50%;
 }
 
 /* Responsive styles for mobile devices */
@@ -220,27 +220,47 @@ input:checked + .slider:before {
     .article_news_paper_title a {
         font-size: 40px;
         line-height: 40px;
-        margin: 5px 0;
+        margin: 5px 15px;
     }
 
     .article_title {
-        font-size: 24px; /* 缩小标题字体 */
-        margin-bottom: 16px;
+        font-size: 24px;
+        margin: 16px 15px;
     }
 
     .article_writer {
-        font-size: 12px; /* 缩小作者信息字体 */
+        font-size: 12px;
         margin-bottom: 16px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     .article_content {
-        font-size: 20px; /* 缩小内容字体 */
+        font-size: 20px;
         margin-bottom: 16px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     .article_text p {
-        font-size: 18px; /* 缩小文章文本字体 */
+        font-size: 18px;
         line-height: 1.5;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .article_grid_section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .article_back_to_home {
+        width: 40px;
+        height: 40px;
+    }
+
+    .article_back_to_home i {
+        font-size: 20px;
     }
 }
 
@@ -261,57 +281,24 @@ input:checked + .slider:before {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #808080; /* 灰色背景 */
+    background-color: #808080;
     color: white;
-    width: 50px;  /* 宽度调整为 50px，形成正方形 */
-    height: 50px; /* 高度调整为 50px，形成正方形 */
-    border-radius: 50%; /* 使按钮成为完美的圆形 */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: background-color 0.3s ease;
     display: flex;
     justify-content: center;
-    align-items: center; /* 居中对齐图标 */
+    align-items: center;
 }
 
-
 .article_back_to_home:hover {
-    background-color: #666666; /* 悬停时变深 */
+    background-color: #666666;
 }
 
 .article_back_to_home i {
-    font-size: 24px; /* 调整图标大小 */
-    color: white; /* 图标颜色 */
-}
-
-/*tool to use */
-/* Divider Styles */
-.article_divider {
-    display: flex;
-    align-items: center;
-    margin: 40px 0; /* 调整分隔符的上下间距 */
-    text-align: center;
-}
-
-.article_divider::before,
-.article_divider::after {
-    content: '';
-    flex: 1;
-    border-bottom: 2px solid #6f6f6f; /* 横线的样式 */
-}
-
-.article_divider::before {
-    margin-right: 10px;
-}
-
-.article_divider::after {
-    margin-left: 10px;
-}
-
-.article_divider span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: #6f6f6f; /* 圆点的颜色 */
-    border-radius: 50%;
+    font-size: 24px;
+    color: white;
 }
