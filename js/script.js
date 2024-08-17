@@ -94,16 +94,19 @@ function loadArticles() {
     const articlesSection = document.getElementById('articles-section');
     articlesSection.innerHTML = '';
 
-    articles.forEach(article => {
+    const articlePromises = articles.map(article => {
         const path = `${article.folder}/${article.file}`;
-        fetch(path)
+        return fetch(path)
             .then(response => response.json())
-            .then(data => {
-                const content = data[currentLanguage];
+            .then(data => ({ article, content: data[currentLanguage] }));
+    });
+
+    Promise.all(articlePromises)
+        .then(results => {
+            results.forEach(({ article, content }) => {
                 const articleElement = document.createElement('article');
                 articleElement.classList.add('the-grid');
 
-                // 使用相对路径和正确的 URL 参数
                 const articleLink = `./page_templates/article-template.html?file=${encodeURIComponent(article.file)}&lang=${encodeURIComponent(currentLanguage)}`;
 
                 articleElement.innerHTML = `
@@ -124,7 +127,7 @@ function loadArticles() {
                 `;
 
                 articlesSection.appendChild(articleElement);
-            })
-            .catch(error => console.error('Error loading article:', error));
-    });
+            });
+        })
+        .catch(error => console.error('Error loading articles:', error));
 }
