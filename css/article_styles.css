@@ -1,4 +1,17 @@
 /* Dark Mode Toggle Styles */
+body {
+    overflow-x: hidden; /* 禁用水平滚动 */
+    max-width: 100%; /* 确保页面宽度不会超过视口 */
+    margin: 0; /* 移除任何默认的外边距 */
+}
+
+html {
+    overflow-x: hidden; /* 确保根元素也禁用水平滚动 */
+    max-width: 100%; /* 确保根元素的宽度不会超过视口 */
+    margin: 0;
+    padding: 0;
+}
+
 .dark_mode_container {
     display: flex;
     position: relative;
@@ -204,12 +217,12 @@ input:checked + .slider:before {
     }
 
     .article_content {
-        font-size: 18px; /* 缩小内容字体 */
+        font-size: 20px; /* 缩小内容字体 */
         margin-bottom: 16px;
     }
 
     .article_text p {
-        font-size: 16px; /* 缩小文章文本字体 */
+        font-size: 18px; /* 缩小文章文本字体 */
         line-height: 1.5;
     }
 }
