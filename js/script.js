@@ -1,7 +1,6 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
     initializeLanguage();
-    initializeTheme();  // 初始化主题
+    initializeTheme();
     loadTranslations();
     loadArticles();
     startClock();
@@ -23,6 +22,8 @@ function switchTheme(event) {
     localStorage.setItem('theme', theme);
 }
 
+let currentLanguage = 'en'; // 默认语言为英语
+
 function initializeLanguage() {
     const savedLanguage = localStorage.getItem('language');
     if (savedLanguage) {
@@ -38,6 +39,7 @@ function switchLanguage(language) {
     localStorage.setItem('language', language);
     loadTranslations();
     loadArticles();
+    startClock();  // 重新启动时钟以使用新语言格式
 }
 
 function loadTranslations() {
@@ -54,6 +56,8 @@ function loadTranslations() {
         })
         .catch(error => console.error('Error loading translations:', error));
 }
+
+let timeInterval;
 
 function startClock() {
     if (timeInterval) clearInterval(timeInterval);
