@@ -1,0 +1,50 @@
+{
+    "en": {
+        "title": "AI Investment Landscape: Opportunities and Strategies",
+        "writer": "internal member 1: Feb 21th, 2024",
+        "image": "../images/article1.webp",
+        "imageSource": "https://unsplash.com/@kreatedmedia",
+        "imageSourceText": "Image Source: Open AI",
+        "content": "Examining the powerful role of Artificial Intelligence (AI) in finance, we highlight NVIDIA's impressive stock growth, explore the teamwork-driven Ultraman's $70K Plan, look into the rewarding strategy of investing in AI-centric companies, and discuss how current interest rates positively affect tech stocks."
+    },
+    "zh": {
+        "title": "人工智能投资格局：机遇与策略",
+        "writer": "内部成员 1：2024年2月21日",
+        "image": "../images/article1.webp",
+        "imageSource": "https://unsplash.com/@kreatedmedia",
+        "imageSourceText": "图片来源：Open AI",
+        "content": "我们探讨了人工智能（AI）在金融领域的强大作用，重点介绍了NVIDIA的惊人股票增长，探讨了团队合作驱动的Ultraman 70K计划，研究了投资于AI为核心的公司的回报策略，并讨论了当前利率如何积极影响科技股。"
+    },
+    "es": {
+        "title": "Panorama de inversión en IA: Oportunidades y estrategias",
+        "writer": "miembro interno 1: 21 de febrero de 2024",
+        "image": "../images/article1.webp",
+        "imageSource": "https://unsplash.com/@kreatedmedia",
+        "imageSourceText": "Fuente de la imagen: Open AI",
+        "content": "Examinamos el poderoso papel de la inteligencia artificial (IA) en las finanzas, destacamos el impresionante crecimiento de las acciones de NVIDIA, exploramos el plan de 70K de Ultraman impulsado por el trabajo en equipo, analizamos la estrategia rentable de invertir en empresas centradas en IA y discutimos cómo las tasas de interés actuales afectan positivamente a las acciones tecnológicas."
+    },
+    "fr": {
+        "title": "Panorama des investissements en IA: Opportunités et stratégies",
+        "writer": "membre interne 1: 21 février 2024",
+        "image": "../images/article1.webp",
+        "imageSource": "https://unsplash.com/@kreatedmedia",
+        "imageSourceText": "Source de l'image: Open AI",
+        "content": "Examinons le rôle puissant de l'intelligence artificielle (IA) dans la finance, nous mettons en lumière la croissance impressionnante des actions de NVIDIA, explorons le plan de 70K d'Ultraman axé sur le travail d'équipe, examinons la stratégie rentable d'investir dans des entreprises centrées sur l'IA et discutons de la manière dont les taux d'intérêt actuels affectent positivement les actions technologiques."
+    },
+    "de": {
+        "title": "AI-Investitionslandschaft: Chancen und Strategien",
+        "writer": "internes Mitglied 1: 21. Februar 2024",
+        "image": "../images/article1.webp",
+        "imageSource": "https://unsplash.com/@kreatedmedia",
+        "imageSourceText": "Bildquelle: Open AI",
+        "content": "Wir untersuchen die mächtige Rolle der künstlichen Intelligenz (KI) im Finanzwesen, heben das beeindruckende Aktienwachstum von NVIDIA hervor, erkunden den teamorientierten 70K-Plan von Ultraman, beleuchten die lohnende Strategie, in KI-zentrierte Unternehmen zu investieren, und diskutieren, wie sich die aktuellen Zinssätze positiv auf Technologiewerte auswirken."
+    },
+    "ja": {
+        "title": "AI投資の現状: 機会と戦略",
+        "writer": "内部メンバー 1: 2024年2月21日",
+        "image": "../images/article1.webp",
+        "imageSource": "https://unsplash.com/@kreatedmedia",
+        "imageSourceText": "画像ソース: Open AI",
+        "content": "金融における人工知能（AI）の強力な役割を調査し、NVIDIAの株価の大幅な成長を強調し、チームワークを重視したウルトラマンの70Kプランを探り、AIを中心とした企業への投資の戦略を検討し、現在の金利がテクノロジー株に与えるプラスの影響を議論します。"
+    }
+}

@@ -171,10 +171,10 @@ h2.title {
     font-size: 22px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3; /* 限制标题最多显示三行 */
     overflow: hidden;
     text-overflow: ellipsis;
-    min-height: 2.8em;
+    min-height: 4.2em; /* 设置标题的最小高度，确保所有标题高度一致 */
 }
 
 h3.writer {
@@ -222,6 +222,8 @@ figcaption {
 .the-grid {
     margin-bottom: 40px;
     transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
 }
 
 .the-grid-content p {

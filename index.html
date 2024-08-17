@@ -30,16 +30,17 @@
             </label>
         </div>
         <div class="news_paper_location"><span id="time"></span></div>
-        
-        <!-- 语言选择器 -->
         <div class="language-switcher">
             <label for="language-select">
-                <i class="fas fa-globe"></i> <!-- 地球图标 -->
+                <i class="fas fa-globe"></i>
             </label>
             <select id="language-select" onchange="switchLanguage(this.value)">
                 <option value="en">English</option>
                 <option value="zh">中文</option>
                 <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="ja">日本語</option>
             </select>
         </div>
     </header>
@@ -48,7 +49,7 @@
         <!-- 文章块将由JavaScript动态生成 -->
     </section>
 
-    <script src="js/script.js"></script> <!-- 加载主要的脚本 -->
-    <script src="js/earth.js"></script> <!-- 加载地球相关脚本 -->
+    <script src="js/script.js"></script>
+    <script src="js/earth.js"></script>
 </body>
 </html>
