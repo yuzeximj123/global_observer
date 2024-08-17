@@ -2,7 +2,7 @@
 body {
     margin: 8px;
     background-color: var(--background-color, #1d2224);
-    font-family: 'Playfair Display', serif; /* 与GLOBAL OBSERVER一致的字体 */
+    font-family: 'Playfair Display', serif;
     color: var(--text-color, white);
     text-align: center;
 }
@@ -22,27 +22,72 @@ body {
     --primary-color: white;
     --secondary-color: #439c47;
     --white-color: #2a2a2a;
-    --background-color: var(--white-color);
-    --text-color: var(--primary-color);
+    --background-color: #2a2a2a;
+    --text-color: white;
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
+/* Larger screen adjustments */
+@media screen and (min-width: 900px) {
+    body {
+        font-size: 1.5em; /* 基础字体放大 */
+    }
+
+    h1.news_paper_title a {
+        font-size: 90px; /* 放大标题 */
+        line-height: 90px;
+        margin: 30px 0;
+    }
+
+    h3 {
+        font-size: 1.3em; /* 调整副标题大小 */
+    }
+
+    .news_paper_location {
+        font-size: 1.2em;
+        padding: 15px 0;
+    }
+
+    .the-grid-section {
+        max-width: 1800px; /* 调整整体宽度 */
+        margin: 0 auto;
+    }
+
+    .the-grid {
+        margin-bottom: 60px; /* 增加块之间的间距 */
+    }
+
+    h2.title {
+        font-size: 2em; /* 增加文章标题大小 */
+        min-height: 6.3em; /* 保持三行的最小高度 */
+    }
+
+    .button a {
+        padding: 15px 20px; /* 增加按钮的填充 */
+        font-size: 1.1em; /* 增大按钮文本 */
+    }
+
+    img {
+        width: 75%; /* 调整图片宽度 */
+    }
+}
+
 /* Link Styles */
 a {
-    color: var(--primary-color); /* 链接颜色 */
-    text-decoration: none; /* 去掉下划线 */
-    transition: color 0.3s ease; /* 颜色过渡效果 */
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--secondary-color); /* 悬停时的颜色 */
-    text-decoration: underline; /* 悬停时显示下划线 */
+    color: var(--secondary-color);
+    text-decoration: underline;
 }
 
 a:visited, a:active {
-    color: var(--primary-color); /* 已访问或激活状态下的颜色 */
-    text-decoration: none; /* 去掉下划线 */
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 /* Language Switcher Styles */
@@ -52,16 +97,16 @@ a:visited, a:active {
 }
 
 .language-switcher label {
-    margin-right: 8px; /* 调整图标与下拉菜单之间的间距 */
+    margin-right: 8px;
 }
 
 .language-switcher i {
-    font-size: 1.2em; /* 调整图标大小 */
-    color: #333; /* 图标颜色 */
+    font-size: 1.2em;
+    color: #333;
 }
 
 [data-theme="dark"] .language-switcher i {
-    color: var(--primary-color); /* 黑夜模式下图标颜色 */
+    color: var(--primary-color);
 }
 
 /* Earth Project Styles */
@@ -69,7 +114,7 @@ canvas {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 20px auto; /* 居中显示 */
+    margin: 20px auto;
 }
 
 /* Header Styles */
@@ -79,7 +124,7 @@ header {
 }
 
 h1.news_paper_title a {
-    font-family: 'Playfair Display', serif; /* 确保GLOBAL OBSERVER使用的字体 */
+    font-family: 'Playfair Display', serif;
     font-weight: 900;
     font-size: 60px;
     text-transform: uppercase;
@@ -160,7 +205,7 @@ input:checked + .slider:before {
 .headline {
     text-align: center;
     line-height: normal;
-    font-family: 'Playfair Display', serif; /* 与GLOBAL OBSERVER一致的字体 */
+    font-family: 'Playfair Display', serif;
     display: block;
     margin: 0 auto;
 }
@@ -171,10 +216,10 @@ h2.title {
     font-size: 22px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; /* 限制标题最多显示三行 */
+    -webkit-line-clamp: 3;
     overflow: hidden;
     text-overflow: ellipsis;
-    min-height: 4.2em; /* 设置标题的最小高度，确保所有标题高度一致 */
+    min-height: 4.2em;
 }
 
 h3.writer {
@@ -189,7 +234,7 @@ h3.writer {
     color: var(--primary-color);
     font-size: 16px;
     padding: 10px 15px;
-    font-family: 'Playfair Display', serif; /* 确保按钮内文本也使用一致的字体 */
+    font-family: 'Playfair Display', serif;
 }
 
 /* Image and Figure Styles */
@@ -198,11 +243,15 @@ figure {
     margin: 0 0 20px;
     filter: grayscale(50%);
     transition: var(--transition-animation);
+    text-align: center;
 }
 
 img {
+    width: 80%;
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 figcaption {
@@ -237,8 +286,8 @@ figcaption {
     .the-grid-section {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center; /* 将项目居中 */
-        gap: 1em; /* 增加间距 */
+        justify-content: center;
+        gap: 1em;
     }
 
     .the-grid {
@@ -250,13 +299,4 @@ figcaption {
 @media screen and (min-width: 1000px) {
     .the-grid {
         flex: 1 1 calc(33.333% - 1em);
-        max-width: calc(33.333% - 1em);
-    }
-}
-
-@media screen and (min-width: 1500px) {
-    .the-grid {
-        flex: 1 1 calc(25% - 1em);
-        max-width: calc(25% - 1em);
-    }
-}
+        max-wid

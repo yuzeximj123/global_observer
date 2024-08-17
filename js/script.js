@@ -102,7 +102,8 @@ function loadArticles() {
                 const articleElement = document.createElement('article');
                 articleElement.classList.add('the-grid');
 
-                const articleLink = `./articles/article-template.html?image=${encodeURIComponent(content.image)}&title=${encodeURIComponent(content.title)}&content=${encodeURIComponent(content.content)}`;
+                // 使用相对路径和正确的 URL 参数
+                const articleLink = `./page_templates/article-template.html?file=${encodeURIComponent(article.file)}&lang=${encodeURIComponent(currentLanguage)}`;
 
                 articleElement.innerHTML = `
                     <div class="the-grid-content">

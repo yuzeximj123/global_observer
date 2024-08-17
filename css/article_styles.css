@@ -1,21 +1,204 @@
-.back-to-home {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+/* Dark Mode Toggle Styles */
+.dark_mode_container {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.dark_mode_switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+    max-width: 60px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.5s;
+    width: 60px;
+}
+
+.slider:before {
+    background-color: white;
+    bottom: 5px;
+    content: "";
+    height: 25px;
+    left: 5px;
+    position: absolute;
+    transition: all 0.5s;
+    width: 25px;
+}
+
+input:checked + .slider {
     background-color: #439c47;
+}
+
+input:checked + .slider:before {
+    transform: translateX(25px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Header Styles */
+.article_header {
+    text-align: center;
+    position: relative;
+}
+
+.article_news_paper_title a {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 60px;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 60px;
+    margin: 15px 0;
+    cursor: pointer;
+    color: var(--article_primary-color);
+    transition: var(--article_transition-animation);
+}
+
+.article_news_paper_location {
+    font-weight: 600;
+    border-bottom: 1px solid var(--article_primary-color);
+    border-top: 1px solid var(--article_primary-color);
+    padding: 10px 0 10px 0;
+    margin: 20px 0;
+}
+
+@media only all and (max-width: 600px) {
+    .article_news_paper_title a {
+        font-size: 40px;
+        line-height: 40px;
+        margin: 5px 0;
+    }
+}
+
+
+/* Article Styles */
+.article_headline {
+    text-align: center;
+    line-height: normal;
+    font-family: 'Playfair Display', serif;
+    display: block;
+    margin: 0 auto;
+}
+
+.article_title {
+    font-weight: 700;
+    font-size: 32px; /* 增大标题字体 */
+    margin-bottom: 20px; /* 标题下方留白 */
+    text-align: center; /* 标题居中 */
+}
+
+.article_writer {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px; /* 作者信息下方留白 */
+}
+
+.article_button a {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--article_primary-color);
+    color: var(--article_primary-color);
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+/* Image and Figure Styles */
+.article_figure {
+    cursor: pointer;
+    margin: 0 0 30px;
+    text-align: center;
+}
+
+.article_img {
+    max-width: 70%; /* 将图片的最大宽度限制为父容器的 70% */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.article_figcaption {
+    font-style: italic;
+    font-size: 12px;
+    text-align: left;
+    transition: var(--article_transition-animation);
+}
+
+/* Grid Layout Styles */
+.article_grid_section {
+    max-width: 800px; /* 限制内容最大宽度，以保持页面居中且美观 */
+    margin: 0 auto; /* 使内容居中显示 */
+    width: 100%;
+    padding: 20px; /* 增加内边距，避免内容贴近边缘 */
+}
+
+.article_grid {
+    margin-bottom: 40px;
+    transition: all 0.5s;
+    text-align: center; /* 确保内容在父容器内居中 */
+}
+
+.article_grid_content {
+    display: block;
+    margin: 0 auto;
+}
+
+.article_grid_content p {
+    margin: 20px 0;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+@media screen and (min-width: 1000px) {
+    .article_grid {
+        flex: 0 1 calc(33% - 1em);
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .article_grid {
+        flex: 0 1 calc(25% - 1em);
+    }
+}
+
+/* 返回按钮样式 */
+.article_back_to_home {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #808080; /* 灰色背景 */
     color: white;
-    padding: 10px;
+    padding: 15px;
     border-radius: 50%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: background-color 0.3s ease;
 }
 
-.back-to-home:hover {
-    background-color: #365e31;
+.article_back_to_home:hover {
+    background-color: #666666; /* 悬停时变深 */
 }
 
-.back-to-home i {
+.article_back_to_home i {
     font-size: 24px;
+    color: white; /* 白色的菜单图标 */
 }

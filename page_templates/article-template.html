@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Global Observer Press</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- 主样式 -->
+    <link rel="stylesheet" href="../css/article_styles.css"> <!-- 文章样式 -->
+    <script src="../js/article_scripts.js"></script> <!-- 文章脚本 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body>
+    <header>
+        <h1 class="article_news_paper_title">
+            <a id="page-title" href="#">Global Observer</a>
+            <h1 id="subtitle">connecting views of the globe</h1>
+        </h1>
+        <div class="dark_mode_container">
+            <label class="dark_mode_switch" for="checkbox">
+                <input id="checkbox" type="checkbox"/>
+                <div class="slider round"></div>
+            </label>
+        </div>
+        <div class="article_news_paper_location">
+            <h3 id="mission-statement">Our mission: Generating the most visionary ideas about business and investment from around the world.</h3>
+        </div>
+        <div class="news_paper_location"></span></div>
+        <!-- 语言选择器 -->
+        <div class="language-switcher">
+            <label for="language-select">
+                <i class="fas fa-globe"></i>
+            </label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="ja">日本語</option>
+            </select>
+        </div>
+    </header>
+
+    <section class="article_grid_section" id="article-content">
+        <!-- 文章内容将由JavaScript动态生成 -->
+    </section>
+
+    <!-- 返回主页的悬浮按钮，使用菜单图标 -->
+    <a href="../index.html" class="article_back_to_home">
+        <i class="fas fa-bars"></i>
+    </a>
+
+    <script src="../js/article_scripts.js"></script> <!-- 加载文章脚本 -->
+</body>
+</html>
