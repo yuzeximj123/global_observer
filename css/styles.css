@@ -1,0 +1,312 @@
+/* Global CSS */
+body {
+    margin: 8px;
+    background-color: var(--background-color, #1d2224);
+    font-family: sans-serif;
+    color: var(--text-color, white);
+    text-align: center;
+}
+
+/* Dark Mode Variables */
+:root {
+    --primary-color: #2a2a2a;
+    --secondary-color: #743e0d;
+    --white-color: white;
+    --green-color: #439c47;
+    --transition-animation: all 0.5s;
+    --background-color: var(--white-color);
+    --text-color: var(--primary-color);
+}
+
+[data-theme="dark"] {
+    --primary-color: white;
+    --secondary-color: #439c47;
+    --white-color: #2a2a2a;
+    --background-color: var(--white-color);
+    --text-color: var(--primary-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Language Switcher CSS */
+.language-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.language-switcher label {
+    margin-right: 8px; /* 调整图标与下拉菜单之间的间距 */
+}
+
+.language-switcher i {
+    font-size: 1.2em; /* 调整图标大小 */
+    color: #333; /* 图标颜色 */
+}
+
+[data-theme="dark"] .language-switcher i {
+    color: var(--primary-color); /* 黑夜模式下图标颜色 */
+}
+
+/* Earth Project CSS */
+canvas {
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 180px);
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    margin: 5px 0 0;
+}
+
+p:last-child {
+    font-style: italic;
+}
+
+/* Newspaper Project CSS */
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    margin: 10px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition-animation);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Dark Mode Toggle CSS */
+.dark_mode_container {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.dark_mode_switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+    max-width: 60px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.5s;
+    width: 60px;
+}
+
+.slider:before {
+    background-color: white;
+    bottom: 5px;
+    content: "";
+    height: 25px;
+    left: 5px;
+    position: absolute;
+    transition: all 0.5s;
+    width: 25px;
+}
+
+input:checked + .slider {
+    background-color: #439c47;
+}
+
+input:checked + .slider:before {
+    transform: translateX(25px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Header CSS */
+header {
+    text-align: center;
+    position: relative;
+}
+
+h1.news_paper_title a {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 60px;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 60px;
+    margin: 15px 0;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: var(--transition-animation);
+}
+
+.news_paper_location {
+    font-weight: 600;
+    border-bottom: 1px solid var(--primary-color);
+    border-top: 1px solid var(--primary-color);
+    padding: 10px 0 10px 0;
+    margin: 20px 0;
+}
+
+@media only all and (max-width: 600px) {
+    h1.news_paper_title a {
+        font-size: 40px;
+        line-height: 40px;
+        margin: 5px 0;
+    }
+}
+
+/* Article CSS */
+.headline {
+    text-align: center;
+    line-height: normal;
+    font-family: 'Playfair Display', serif;
+    display: block;
+    margin: 0 auto;
+}
+
+h2.title {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 22px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 限制标题最多显示两行 */
+    overflow: hidden; /* 隐藏超出的文本 */
+    text-overflow: ellipsis; /* 超出的文本以省略号显示 */
+    min-height: 2.8em; /* 设置标题的最小高度，确保所有标题高度一致 */
+}
+
+h3.writer {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.button a {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+/* Image and Figure CSS */
+figure {
+    cursor: pointer;
+    margin: 0 0 20px;
+    filter: grayscale(50%);
+    transition: var(--transition-animation);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 12px;
+    text-align: left;
+    transition: var(--transition-animation);
+}
+
+/* Grid Layout CSS */
+.the-grid-section {
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.the-grid {
+    margin-bottom: 40px;
+    transition: all 0.5s;
+}
+
+.the-grid-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 修改后的CSS */
+@media screen and (min-width: 768px) {
+    .the-grid-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* 将项目居中 */
+        gap: 1em; /* 增加间距 */
+    }
+
+    .the-grid {
+        flex: 1 1 calc(50% - 1em);
+        max-width: calc(50% - 1em); /* 确保最大宽度以均匀分布 */
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .the-grid {
+        flex: 1 1 calc(33.333% - 1em);
+        max-width: calc(33.333% - 1em); /* 确保最大宽度以均匀分布 */
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .the-grid {
+        flex: 1 1 calc(25% - 1em);
+        max-width: calc(25% - 1em); /* 确保最大宽度以均匀分布 */
+    }
+}
+
+/* 返回主页的悬浮按钮 */
+.back-to-home {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #439c47;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #365e31;
+}
+
+.back-to-home i {
+    font-size: 24px;
+}

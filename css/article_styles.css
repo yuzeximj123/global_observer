@@ -1,0 +1,21 @@
+.back-to-home {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #439c47;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #365e31;
+}
+
+.back-to-home i {
+    font-size: 24px;
+}

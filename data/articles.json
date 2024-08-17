@@ -1,0 +1,74 @@
+{
+  "en": {
+    "articles": [
+      {
+        "title": "AI Investment Landscape: Opportunities and Strategies",
+        "writer": "internal member 1: Feb 21th, 2024",
+        "image": "images/article1.webp",
+        "imageSource": "https://unsplash.com/@kreatedmedia",
+        "imageSourceText": "Image Source: Open AI",
+        "content": "Examining the powerful role of Artificial Intelligence (AI) in finance, we highlight NVIDIA's impressive stock growth, explore the teamwork-driven Ultraman's $70K Plan, look into the rewarding strategy of investing in AI-centric companies, and discuss how current interest rates positively affect tech stocks.",
+        "link": "https://en.wikipedia.org/wiki/Northern_Ndebele_people",
+        "linkText": "Read More"
+      },
+      {
+        "title": "Insights from Japan Trip: Travel Experiences and the Silver Economy",
+        "writer": "internal member 2: Feb 21th, 2024",
+        "image": "images/article2.webp",
+        "imageSource": "https://unsplash.com/@phillipgold",
+        "imageSourceText": "Image Source: Open AI",
+        "content": "Japan's aging population shapes its workforce, from elderly baggage handlers to taxi drivers. The emerging Silver Economy, highlighted by rising elderly care costs partly funded by the government, offers new opportunities in sectors like travel. This trend reflects broader East Asian challenges, including declining birth rates and the retirement of the baby boomer generation.",
+        "link": "https://en.wikipedia.org/wiki/Shaka",
+        "linkText": "Read More"
+      }
+    ]
+  },
+  "zh": {
+    "articles": [
+      {
+        "title": "人工智能投资格局：机遇与策略",
+        "writer": "内部成员 1：2024年2月21日",
+        "image": "images/article1.webp",
+        "imageSource": "https://unsplash.com/@kreatedmedia",
+        "imageSourceText": "图片来源：Open AI",
+        "content": "我们探讨了人工智能（AI）在金融领域的强大作用，重点介绍了NVIDIA的惊人股票增长，探讨了团队合作驱动的Ultraman 70K计划，研究了投资于AI为核心的公司的回报策略，并讨论了当前利率如何积极影响科技股。",
+        "link": "https://en.wikipedia.org/wiki/Northern_Ndebele_people",
+        "linkText": "阅读更多"
+      },
+      {
+        "title": "日本旅行的见解：旅行经历与银发经济",
+        "writer": "内部成员 2：2024年2月21日",
+        "image": "images/article2.webp",
+        "imageSource": "https://unsplash.com/@phillipgold",
+        "imageSourceText": "图片来源：Open AI",
+        "content": "日本老龄化人口正在影响其劳动力，从老年行李搬运工到出租车司机。银发经济的兴起，尤其是部分由政府资助的不断上升的老年护理成本，在旅游等领域提供了新的机会。这一趋势反映了更广泛的东亚挑战，包括出生率下降和婴儿潮一代的退休。",
+        "link": "https://en.wikipedia.org/wiki/Shaka",
+        "linkText": "阅读更多"
+      }
+    ]
+  },
+  "es": {
+    "articles": [
+      {
+        "title": "Panorama de inversión en IA: Oportunidades y estrategias",
+        "writer": "miembro interno 1: 21 de febrero de 2024",
+        "image": "images/article1.webp",
+        "imageSource": "https://unsplash.com/@kreatedmedia",
+        "imageSourceText": "Fuente de la imagen: Open AI",
+        "content": "Examinamos el poderoso papel de la inteligencia artificial (IA) en las finanzas, destacamos el impresionante crecimiento de las acciones de NVIDIA, exploramos el plan de 70K de Ultraman impulsado por el trabajo en equipo, analizamos la estrategia rentable de invertir en empresas centradas en IA y discutimos cómo las tasas de interés actuales afectan positivamente a las acciones tecnológicas.",
+        "link": "https://en.wikipedia.org/wiki/Northern_Ndebele_people",
+        "linkText": "Leer más"
+      },
+      {
+        "title": "Perspectivas del viaje a Japón: Experiencias de viaje y la economía plateada",
+        "writer": "miembro interno 2: 21 de febrero de 2024",
+        "image": "images/article2.webp",
+        "imageSource": "https://unsplash.com/@phillipgold",
+        "imageSourceText": "Fuente de la imagen: Open AI",
+        "content": "El envejecimiento de la población en Japón está moldeando su fuerza laboral, desde manipuladores de equipaje ancianos hasta conductores de taxis. La emergente economía plateada, destacada por el aumento de los costos de atención a los ancianos parcialmente financiados por el gobierno, ofrece nuevas oportunidades en sectores como el turismo. Esta tendencia refleja desafíos más amplios en Asia oriental, incluida la disminución de las tasas de natalidad y la jubilación de la generación del baby boom.",
+        "link": "https://en.wikipedia.org/wiki/Shaka",
+        "linkText": "Leer más"
+      }
+    ]
+  }
+}
