@@ -185,6 +185,35 @@ input:checked + .slider:before {
     font-size: 24px; /* 调整文字大小 */
 }
 
+/* Responsive styles for mobile devices */
+@media only all and (max-width: 600px) {
+    .article_news_paper_title a {
+        font-size: 40px;
+        line-height: 40px;
+        margin: 5px 0;
+    }
+
+    .article_title {
+        font-size: 24px; /* 缩小标题字体 */
+        margin-bottom: 16px;
+    }
+
+    .article_writer {
+        font-size: 12px; /* 缩小作者信息字体 */
+        margin-bottom: 16px;
+    }
+
+    .article_content {
+        font-size: 18px; /* 缩小内容字体 */
+        margin-bottom: 16px;
+    }
+
+    .article_text p {
+        font-size: 16px; /* 缩小文章文本字体 */
+        line-height: 1.5;
+    }
+}
+
 @media screen and (min-width: 1000px) {
     .article_grid {
         flex: 0 1 calc(33% - 1em);
