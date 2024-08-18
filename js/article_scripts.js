@@ -84,7 +84,7 @@ function articleLoadContent(file, language) {
                                 <p class="article_content">${content.content}</p>
                                 <div class="article_divider"><span></span></div>
                                 <div class="article_text">
-                                    <p>${content.article_text.replace(/\n/g, '</p><p>').replace(/\\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;').replace(/\\pagebreak/g, '<div class="article_divider"><span></span></div>')}</p>
+                                    <p>${content.article_text.replace(/\n/g, '</p><p>').replace(/\\lb/g, '<b>').replace(/\\rb/g, '</b>').replace(/\\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;').replace(/\\pagebreak/g, '<div class="article_divider"><span></span></div>')}</p>
                                 </div>
                             </div>
                         </article>
