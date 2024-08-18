@@ -19,11 +19,11 @@ body {
 }
 
 [data-theme="dark"] {
-    --primary-color: white;
+    --primary-color: rgb(233, 229, 215);
     --secondary-color: #439c47;
     --white-color: #2a2a2a;
     --background-color: #2a2a2a;
-    --text-color: rgb(230, 226, 212);
+    --text-color: rgb(233, 229, 215);
     background-color: var(--background-color);
     color: var(--text-color);
 }
