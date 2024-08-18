@@ -40,7 +40,7 @@ var activeFlightLineStyle = {
 drawEarth(true, false);
 
 d3
-  .json("https://unpkg.com/world-atlas@1.1.4/world/110m.json")
+  .json("./data/earth_data/110m.json")
   .then(function(loadedTopoJson) {
     var topology = topojson.presimplify(loadedTopoJson);
     topology = topojson.simplify(topology, 0.25);
@@ -50,10 +50,10 @@ d3
 
     Promise.all([
       d3.csv(
-        "https://gist.githubusercontent.com/jwasilgeo/df731e6bec2ce12ceb2b0bc2274c5ee9/raw/5b22f98b114d1624893a0f370bb63ad81fc13b5c/longest_flights_10242018.csv"
+        "./data/earth_data/longest_flights_10242018.csv"
       ),
       d3.json(
-        "https://gist.githubusercontent.com/jwasilgeo/df731e6bec2ce12ceb2b0bc2274c5ee9/raw/5b22f98b114d1624893a0f370bb63ad81fc13b5c/airports.topojson.json"
+        "./data/earth_data/airports.topojson.json"
       )
     ]).then(function(loadedDataResults) {
       var csvData = loadedDataResults[0];
