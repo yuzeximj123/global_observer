@@ -95,40 +95,48 @@ function loadArticles() {
     const articlesSection = document.getElementById('articles-section');
     articlesSection.innerHTML = '';
 
-    const articlePromises = articles.map(article => {
-        const path = `${article.folder}/${article.file}`;
-        return fetch(path)
-            .then(response => response.json())
-            .then(data => ({ article, content: data[currentLanguage] }));
-    });
+    // 更新后的 translations.json 路径
+    fetch('./data/translations.json')
+        .then(response => response.json())
+        .then(translations => {
+            const readMoreText = translations[currentLanguage]?.readMore || "Read More";
 
-    Promise.all(articlePromises)
-        .then(results => {
-            results.forEach(({ article, content }) => {
-                const articleElement = document.createElement('article');
-                articleElement.classList.add('the-grid');
-
-                const articleLink = `./page_templates/article-template.html?file=${encodeURIComponent(article.file)}&lang=${encodeURIComponent(currentLanguage)}`;
-
-                articleElement.innerHTML = `
-                    <div class="the-grid-content">
-                        <div class="headline">
-                            <a href="${articleLink}">
-                                <h2 class="title">${content.title}</h2>
-                                <figure>
-                                    <img alt="${content.title}" src="${content.image}"/>
-                                </figure>
-                            </a>
-                        </div>
-                        <p>${content.content}</p>
-                        <div class="button">
-                            <a href="${articleLink}">Read More</a>
-                        </div>
-                    </div>
-                `;
-
-                articlesSection.appendChild(articleElement);
+            const articlePromises = articles.map(article => {
+                const path = `${article.folder}/${article.file}`;
+                return fetch(path)
+                    .then(response => response.json())
+                    .then(data => ({ article, content: data[currentLanguage] }));
             });
+
+            Promise.all(articlePromises)
+                .then(results => {
+                    results.forEach(({ article, content }) => {
+                        const articleElement = document.createElement('article');
+                        articleElement.classList.add('the-grid');
+
+                        const articleLink = `./page_templates/article-template.html?file=${encodeURIComponent(article.file)}&lang=${encodeURIComponent(currentLanguage)}`;
+
+                        articleElement.innerHTML = `
+                            <div class="the-grid-content">
+                                <div class="headline">
+                                    <a href="${articleLink}">
+                                        <h2 class="title">${content.title}</h2>
+                                        <figure>
+                                            <img alt="${content.title}" src="${content.image}"/>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <p>${content.content}</p>
+                                <div class="button">
+                                    <a href="${articleLink}">${readMoreText}</a> <!-- 使用翻译后的 "Read More" 文本 -->
+                                </div>
+                            </div>
+                        `;
+
+                        articlesSection.appendChild(articleElement);
+                    });
+                })
+                .catch(error => console.error('Error loading articles:', error));
         })
-        .catch(error => console.error('Error loading articles:', error));
+        .catch(error => console.error('Error loading translations:', error));
 }
