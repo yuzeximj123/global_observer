@@ -87,7 +87,7 @@ function updateTime() {
                     suffix = 'rd';
                 }
 
-                document.getElementById('time').textContent = `${weekday} ${day}${suffix}, ${month} ${year}`;
+                document.getElementById('time').textContent = `${weekday} ${day}, ${month} ${year}`;
             }
         })
         .catch(error => console.error('Error updating time:', error));
