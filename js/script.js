@@ -76,7 +76,16 @@ function updateTime() {
                 const month = translations.monthNames[date.getMonth()];
                 const weekday = translations.dayNames[date.getDay()];
                 const year = date.getFullYear();
-                const suffix = (day > 3 && day < 21) ? 'th' : ['st', 'nd', 'rd', 'th'][Math.min(day % 10, 4)];
+
+                // Determine the correct suffix
+                let suffix = 'th';
+                if (day % 10 === 1 && day !== 11) {
+                    suffix = 'st';
+                } else if (day % 10 === 2 && day !== 12) {
+                    suffix = 'nd';
+                } else if (day % 10 === 3 && day !== 13) {
+                    suffix = 'rd';
+                }
 
                 document.getElementById('time').textContent = `${weekday} ${day}${suffix}, ${month} ${year}`;
             }
