@@ -97,6 +97,7 @@ function loadArticles() {
     const articles = [
         { file: 'world_currency.json', folder: 'articles' },
         { file: 'ai_3d_framework.json', folder: 'articles' },
+        { file: 'beyond_bancor.json', folder: 'articles' },
         { file: 'ai_investment.json', folder: 'articles' },
         { file: 'japan_trip.json', folder: 'articles' }
     ];
