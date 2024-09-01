@@ -1,49 +1,49 @@
 {
     "en": {
         "subtitle": "connecting views of the globe",
-        "mission": "Our mission: Generating the most visionary ideas about business and investment from around the world.",
+        "mission": "Our mission: To gather the most visionary ideas on business and investment from around the world to accelerate the development of the world.",
         "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         "readMore":"Read More"
     },
     "zh": {
         "subtitle": "连接全球视角",
-        "mission": "我们的使命：汇集来自世界各地关于商业和投资的最具远见的想法。",
+        "mission": "我们的使命：汇集来自世界各地关于商业和投资的最具远见的想法，以加速世界的发展",
         "dayNames": ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
         "monthNames": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
         "readMore":"阅读更多"
     },
     "es": {
         "subtitle": "conectando puntos de vista del globo",
-        "mission": "Nuestra misión: Generar las ideas más visionarias sobre negocios e inversión de todo el mundo.",
+        "mission": "Nuestra misión: Reunir las ideas más visionarias sobre negocios e inversión de todo el mundo para acelerar el desarrollo del mundo.",
         "dayNames": ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"],
         "monthNames": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
         "readMore":"Leer más"
     },
     "fr": {
         "subtitle": "connecter les points de vue du globe",
-        "mission": "Notre mission : Générer les idées les plus visionnaires sur les affaires et l'investissement à travers le monde.",
+        "mission": "Notre mission : Rassembler les idées les plus visionnaires en matière de commerce et d'investissement du monde entier pour accélérer le développement du monde.",
         "dayNames": ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"],
         "monthNames": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
         "readMore":"En savoir plus"
     },
     "de": {
         "subtitle": "Verbindung der Ansichten der Welt",
-        "mission": "Unsere Mission: Die visionärsten Ideen über Wirtschaft und Investitionen aus aller Welt zu generieren.",
+        "mission": "Unsere Mission: Die visionärsten Ideen zu Geschäft und Investitionen aus der ganzen Welt zusammenzubringen, um die Entwicklung der Welt zu beschleunigen.",
         "dayNames": ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
         "monthNames": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
         "readMore":"Mehr erfahren"
     },
     "ja": {
         "subtitle": "世界の視点をつなぐ",
-        "mission": "私たちの使命: 世界中のビジネスと投資に関する最も先見的なアイデアを生み出すこと。",
+        "mission": "私たちの使命：世界中からビジネスと投資に関する最も先見的なアイデアを集め、世界の発展を加速させること。",
         "dayNames": ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"],
         "monthNames": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
         "readMore":"詳しく読む (くわしくよむ)"
     },
     "ar": {
         "subtitle": "ربط وجهات النظر حول العالم",
-        "mission": "مهمتنا: توليد الأفكار الأكثر رؤية حول الأعمال والاستثمار من جميع أنحاء العالم.",
+        "mission": "مهمتنا: جمع الأفكار الأكثر رؤية في مجال الأعمال والاستثمار من جميع أنحاء العالم لتسريع تطوير العالم.",
         "dayNames": ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"],
         "monthNames": ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"],
         "readMore": "اقرأ المزيد"
